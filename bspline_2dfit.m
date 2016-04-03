@@ -3,7 +3,7 @@ Point cloud fitting using bspline
 
 Yinqing Li
 yinqing@mit.edu
-MIT, 2015
+2015
 
 Minimize distance of point to s bspline and
 minimize total length of the bspline or smoothness of the bspline
@@ -30,6 +30,7 @@ Outputs:
 sp_fit: bspline fitted to point cloud
 t_hat: position of each point on the fitted bspline
 
+Copyright (c) 2015, Yinqing Li
 %}
 
 function [sp_fit,t_hat] = bspline_2dfit(x, sp_init, option)
