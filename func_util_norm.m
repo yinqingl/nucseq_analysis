@@ -14,7 +14,7 @@ end
 
 Copyright (c) 2015, Yinqing Li
 %}
- 
+
 function func_h = func_util_norm
 func_h = struct();
 func_h.norm_DESeq = @norm_DESeq; %normalization using size factor method introduced in DESeq, in house implementation
