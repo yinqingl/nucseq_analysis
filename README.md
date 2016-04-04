@@ -2,8 +2,8 @@
 
 see reference:
 
-Naomi Habib\*, Yinqing Li\*, Matthias Heidenreich, Lukasz Swiech, John J Trombetta, Feng Zhang, Aviv Regev 
-__Div-Seq: A single nucleus RNA-Seq method reveals dynamics of rare adult newborn neurons in the CNS__ 
+Naomi Habib\*, Yinqing Li\*, Matthias Heidenreich, Lukasz Swiech, John J Trombetta, Feng Zhang, Aviv Regev  
+__Div-Seq: A single nucleus RNA-Seq method reveals dynamics of rare adult newborn neurons in the CNS__  
 doi: http://dx.doi.org/10.1101/045989
 
 use under MIT license
