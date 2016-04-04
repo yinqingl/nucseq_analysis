@@ -21,7 +21,7 @@ end
 
 Copyright (c) 2015, Yinqing Li
 %}
-
+ 
 function func_h = func_util_bisne
 func_h = struct();
 func_h.corr2d = @corr2d;
