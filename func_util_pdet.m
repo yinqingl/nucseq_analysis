@@ -130,10 +130,6 @@ if strcmp(DISTANCE,'euclidean'),
 %         toc
 
     else
-%         mode = 0;
-%         d = pdet_util_c(X,W,mode);
-%         d = squareform(d);
-        
         [n,p] = size(X);
 
         tic
