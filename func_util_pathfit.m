@@ -18,7 +18,7 @@ Copyright (c) 2015, Yinqing Li
 function func_h = func_util_pathfit
 func_h = struct();
 % func_h.ginput_interactive = @ginput_interactive; %internal helper function
- 
+
 func_h.find_st = @find_st; %example for fitting a linear structure using LKH or mst
 func_h.find_st_bspline = @find_st_bspline; %example for bspline fitting for tsne 2d embedding
 
