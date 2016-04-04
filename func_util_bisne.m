@@ -3,7 +3,7 @@ helper functions for dimensionality reduction using PCA, tSNE, and biSNE
 
 Yinqing Li
 yinqingl@mit.edu
-MIT, 2015
+2015
 
 %import functions
 import bioma.data.*
