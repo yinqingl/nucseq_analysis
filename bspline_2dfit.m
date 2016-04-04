@@ -42,6 +42,7 @@ cp = reshape(cp,numel(cp),1);
 if size(x,1) > size(x,2),
     x = x';
 end
+
 if sp_init.order < 3,
     disp('sp_init.order should be larger than 3.');
     return
