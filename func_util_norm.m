@@ -69,7 +69,7 @@ function [X_norm, S_norm] = norm_rDESeq(X_in,if_log)
         X_norm = X*diag(1./S_norm);
     else
         X = X_in;
-        gm = @(x) exp(mean(log(x+1))-1);
+        gm = @(x) mean(log(x+1))-1;
         k_i = zeros(size(X));
         for i = [1:size(X,1)],
             k_i(i,X(i,:)~=0) = X(i,X(i,:)~=0)/gm(X(i,:)~=0);
