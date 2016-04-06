@@ -54,6 +54,8 @@ function [X_norm, S_norm] = norm_rDESeq(X_in,if_log)
     end
     X_in = double(X_in);
     
+    %if_log = true: use mean(log(x+1)) to approximate geomean
+    %if_log = false: use geomean(X)
     if ~exist('if_log', 'var')
         X = X_in;
         k_i = zeros(size(X));
@@ -66,8 +68,8 @@ function [X_norm, S_norm] = norm_rDESeq(X_in,if_log)
         end
         X_norm = X*diag(1./S_norm);
     else
-        X = log(X_in+1);
-        gm = exp(mean(X,2)-1);  %use log(x+1) to approximate geomean
+        X = X_in;
+        gm = @(x) exp(mean(log(x+1))-1);
         k_i = zeros(size(X));
         for i = [1:size(X,1)],
             k_i(i,X(i,:)~=0) = X(i,X(i,:)~=0)/gm(X(i,:)~=0);
@@ -75,7 +77,8 @@ function [X_norm, S_norm] = norm_rDESeq(X_in,if_log)
         S_norm = zeros(1,size(X,2));    
         for i = [1:size(X,2)],
             S_norm(i) = median(k_i(k_i(:,i)~=0,i));
-        end        
+        end
+        X_norm = X*diag(1./S_norm);
     end
 end
 
