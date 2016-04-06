@@ -442,7 +442,7 @@ dlambda_dt = exp_t./(1+exp_t).^2;
 dt_dbeta = [ones(size(e)),e];
 d_lambda = zeros(length(e),length(beta));
 for i = 1:length(beta),
-    d_lambda(:,i) = dlambda_dt.*dt_dbeta(:,1);
+    d_lambda(:,i) = dlambda_dt.*dt_dbeta(:,i);
 end
 
 % d_lambda = reshape(d_lambda,n_row,n_col);
@@ -480,7 +480,7 @@ dlambda_dt = 1./(1+exp(-1e2*x)).*exp(-t);
 dt_dbeta = [ones(size(e)),e];
 d_lambda = zeros(length(e),length(beta));
 for i = 1:length(beta),
-    d_lambda(:,i) = dlambda_dt.*dt_dbeta(:,1);
+    d_lambda(:,i) = dlambda_dt.*dt_dbeta(:,i);
 end
 % d_lambda = exp(-t);
 
