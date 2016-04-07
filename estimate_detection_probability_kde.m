@@ -82,7 +82,7 @@ p_e_ij_z_d_ij_z(i_z) = 0.5;  %0.5 probability e  = 0 when see d = 0;
 if isfield(option, 'prev_p_det'),
     p_e_ij_z_d_ij_z(:,i_X_ref) = prev_p_det(~j_z,:);
     disp('use prev_p_det');
-end 
+end
 
 p_d_ij_nz_e_ij_nz = ones(size(dat)) - epsilon;   %prob d_ij ~= 0 when e_ij ~= 0
 p_d_ij_z_e_ij_nz = 1-p_d_ij_nz_e_ij_nz;   %prob d_ij = 0 when e_ij ~= 0
@@ -427,7 +427,7 @@ function lambda = lambda_logit(e,beta)
 % [n_row, n_col] = size(e);
 % e = reshape(e,1,numel(e));
 % e = log(e+1); %fit on log scale
-lambda = 1./(1+exp(-[ones(size(e)),e]*beta));
+lambda = 2 * (1./(1+exp(-[ones(size(e)),e]*beta)) - 0.5);
 % lambda = reshape(lambda,n_row,n_col);
 end
 
@@ -437,7 +437,7 @@ function d_lambda = d_lambda_logit(e,beta)
 % e = log(e+1); %fit on log scale
 t = [ones(size(e)),e]*beta;
 exp_t = exp(-t);
-dlambda_dt = exp_t./(1+exp_t).^2;
+dlambda_dt = 2*exp_t./(1+exp_t).^2;
 
 dt_dbeta = [ones(size(e)),e];
 d_lambda = zeros(length(e),length(beta));
