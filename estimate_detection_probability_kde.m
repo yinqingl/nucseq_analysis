@@ -136,7 +136,7 @@ epsilon = 1e-4;
 
 %logit
 if strcmp(alg,'logit'),
-    beta_i = repmat([-5;1],1,n_i);  %logit
+    beta_i = repmat([-5;0.25],1,n_i);  %logit
     lambda = @lambda_logit;
     d_lambda = @d_lambda_logit;
     data = dat_log; %fit on log scale
@@ -427,7 +427,7 @@ function lambda = lambda_logit(e,beta)
 % [n_row, n_col] = size(e);
 % e = reshape(e,1,numel(e));
 % e = log(e+1); %fit on log scale
-lambda = 2 * (1./(1+exp(-[ones(size(e)),e]*beta)) - 0.5);
+lambda = 1./(1+exp(-[ones(size(e)),e]*beta));
 % lambda = reshape(lambda,n_row,n_col);
 end
 
@@ -437,7 +437,7 @@ function d_lambda = d_lambda_logit(e,beta)
 % e = log(e+1); %fit on log scale
 t = [ones(size(e)),e]*beta;
 exp_t = exp(-t);
-dlambda_dt = 2*exp_t./(1+exp_t).^2;
+dlambda_dt = exp_t./(1+exp_t).^2;
 
 dt_dbeta = [ones(size(e)),e];
 d_lambda = zeros(length(e),length(beta));
