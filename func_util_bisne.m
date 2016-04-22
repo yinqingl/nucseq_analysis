@@ -86,11 +86,11 @@ p_ostat = local_expr_dmap(X',W',ydata,struct('mode','ostat','gp_th',0.02,'th_qtl
 p_ostat_h = local_expr_dmap(X',W',tiedrank(ydata),struct('mode','ostat','gp_th',0.02,'th_qtle',1.1));
 p_hg = local_expr_dmap(X',W',ydata,struct('mode','hg','pdf',@tpdf,'k',5));
 p_moran = local_expr_dmap(X',W',ydata,struct('mode','moranI','pdf',@(x) tpdf(x,1),'prox',1));
-p_moran_h = local_expr_dmap(X'>1.1,W',struct('mode','moranI','pdf',@(x) tpdf(x,1),'prox',1));
+p_moran_h = local_expr_dmap(X'>1.1,W',ydata,struct('mode','moranI','pdf',@(x) tpdf(x,1),'prox',1));
 
 %*********************************************
 %find a cut-off score
-pp = {prod(p_ostat_h,2), p_hg, p_moran, p_moran_th_normpdf};
+pp = {prod(p_ostat_h,2), p_hg, p_moran, p_moran_h};
 
 p = pp{k};  %set k to select one of the bisne statistics
 p(sum((X>1.1),2)<10) = inf;    %filter on very lowly expressed gene
@@ -241,4 +241,5 @@ nout = max(nargout,1) - 1;
 for k = 1:nout
    varargout{k} = y_fit_l;
 end
+
 end

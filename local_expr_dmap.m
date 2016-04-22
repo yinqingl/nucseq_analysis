@@ -64,7 +64,13 @@ Copyright (c) 2015, Yinqing Li
 
 function p = local_expr_dmap(X,W,ydata,option)
 
-fh = pdet_util;
+fh = func_util_bisne;
+fh_str = structvars(fh);
+for i = [1:size(fh_str,1)],
+    eval(fh_str(i,:));
+end
+
+fh = func_util_pdet;
 fh_str = structvars(fh);
 for i = [1:size(fh_str,1)],
     eval(fh_str(i,:));
