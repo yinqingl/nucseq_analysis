@@ -7,6 +7,7 @@ Naomi Habib\*, Yinqing Li\*, Matthias Heidenreich, Lukasz Swiech, John J Trombet
 doi: http://dx.doi.org/10.1101/045989
 
 Copyright (c) 2016, Yinqing Li
+
 yinqingl@mit.edu
 
 Please see example_bisne.m for bisne example.
