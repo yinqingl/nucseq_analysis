@@ -25,19 +25,19 @@ end
 
 
 % %generate some synthetic data
-% num_genes = 5000;
-% num_cells_per_group = 50;
-% num_groups = 4;
-% 
-% i_groups = {};
-% for i = 1:num_groups,
-%     i_groups{i} = [(i-1)*num_cells_per_group+1:i*num_cells_per_group];
-% end
+num_genes = 5000;
+num_cells_per_group = 50;
+num_groups = 4;
+
+i_groups = {};
+for i = 1:num_groups,
+    i_groups{i} = [(i-1)*num_cells_per_group+1:i*num_cells_per_group];
+end
 % X = randn(num_genes, length([i_groups{:}]));
 % W = ones(size(X));    %probability of detection, for real applications, obtain W from estimate_detection_probability_kde
 % 
 % %add group specific expression to each group
-% num_genes_rand = 20;
+num_genes_rand = 20;
 % for i = 1:num_groups,
 %     for j = i:num_groups,
 %         gene_i = datasample([1:num_genes], num_genes_rand,'Replace',false);
@@ -46,7 +46,7 @@ end
 %     end
 % end
 % %add noise expression
-% num_cells_rand = round(size(X,2)/2);
+num_cells_rand = round(size(X,2)/2);
 % for i = 1:10,
 %     cell_i = datasample([1:size(X,2)], num_cells_rand,'Replace',false);
 %     gene_i = datasample([1:num_genes], num_genes_rand,'Replace',false);
