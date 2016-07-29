@@ -46,7 +46,7 @@ num_genes_rand = 20;
 %     end
 % end
 % %add noise expression
-num_cells_rand = round(size(X,2)/2);
+% num_cells_rand = round(size(X,2)/2);
 % for i = 1:10,
 %     cell_i = datasample([1:size(X,2)], num_cells_rand,'Replace',false);
 %     gene_i = datasample([1:num_genes], num_genes_rand,'Replace',false);
@@ -61,6 +61,8 @@ num_cells_rand = round(size(X,2)/2);
 % save example_dat X_init W_init
 
 load example_dat
+
+num_cells_rand = round(size(X,2)/2);
 
 X = X_init;
 W = W_init;
