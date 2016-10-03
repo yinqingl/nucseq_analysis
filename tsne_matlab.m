@@ -21,7 +21,7 @@ function ydata = tsne_matlab(X, labels, no_dims, initial_dims, perplexity, DISTA
 % University of California, San Diego
 
 % Modified by Yinqing Li
-% yinqingl@mit.edu
+% yinqingl@csail.mit.edu
 %
 % 1. DISTANCE: 'euclidean', 'correlation', 'precomputed', then D = X;
 % 2. skip internal PCA

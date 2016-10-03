@@ -2,7 +2,7 @@
 Point cloud fitting using bspline
 
 Yinqing Li
-yinqing@mit.edu
+yinqing@csail.mit.edu
 2015
 
 Minimize distance of point to s bspline and

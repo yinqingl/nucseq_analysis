@@ -2,7 +2,7 @@
 helper functions for fitting a path along data points
 
 Yinqing Li
-yinqingl@mit.edu
+yinqingl@csail.mit.edu
 2015
 
 %import functions
@@ -161,7 +161,7 @@ for i = 1:length(path)-1;
 end
 scatter(ydata_path(:,1),ydata_path(:,2),21,'filled');
 
-%construct initial spline
+%construct the initial spline
 n = length(ydata_path);
 k = 3+1;
 m_knot = augknt(linspace(0,1,n-2),k);
