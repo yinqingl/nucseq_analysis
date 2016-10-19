@@ -30,6 +30,7 @@ func_h.eigenvalue_fit = @eigenvalue_fit;
 func_h.pca_tsne = @pca_tsne; %example for PCA and tSNE embedding
 func_h.bisne_selection = @bisne_selection; %example for selection of bisne threshold
 func_h.datamatrix2matrix = @datamatrix2matrix;
+func_h.get_line_color = @get_line_color;
 
 %make sure these functions are in the directory
 %{
@@ -249,6 +250,11 @@ cellnames = get(dat_matrix, 'ColNames');
 genes = get(dat_matrix, 'RowNames');
 num_samples = get(dat_matrix, 'NCols');
 num_genes = get(dat_matrix, 'NRows');
+end
+
+function c = get_line_color(i, n)
+cn = hsv(n+2);
+c = cn(i+1,:);
 end
 
 end
