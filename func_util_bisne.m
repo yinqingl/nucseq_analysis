@@ -221,7 +221,7 @@ y_fit: fitted eigenvalues
 y_fit_l: index of eigenvalues that deviate from fitting by 0.01 significance level
 %}
 function [y_fit,varargout] = eigenvalue_fit(y)
-y = y/sum(y);
+y = y/sum(y); 
 x = [1:length(y)]'/length(y);
 xp = [ones(size(x)),x.^(1/2)];
 warning('off','stats:statrobustfit:IterationLimit');
