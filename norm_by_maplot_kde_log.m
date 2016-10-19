@@ -2,7 +2,7 @@
 normalize all data points to a reference data point
 
 Yinqing Li
-yinqingl@mit.edu
+yinqingl@csail.mit.edu
 2015
 
 calculate normalization on selected subset of genes

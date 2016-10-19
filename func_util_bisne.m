@@ -2,7 +2,7 @@
 helper functions for dimensionality reduction using PCA, tSNE, and biSNE
 
 Yinqing Li
-yinqingl@mit.edu
+yinqingl@csail.mit.edu
 2015
 
 %import functions

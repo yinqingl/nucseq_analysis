@@ -2,7 +2,7 @@
 estimate the probability of a gene not expressed given that the gene is not observed
 
 Yinqing Li
-yinqingl@mit.edu
+yinqingl@csail.mit.edu
 2015
 
 inputs: 

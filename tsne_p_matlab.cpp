@@ -32,6 +32,9 @@
 
 /*
 modified by Yinqing Li
+yinqingl@csail.mit.edu
+2014
+
 remove dependence on cblas
 */
 

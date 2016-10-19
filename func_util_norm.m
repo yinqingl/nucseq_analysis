@@ -2,7 +2,7 @@
 helper functions for normalization
 
 Yinqing Li
-yinqingl@mit.edu
+yinqingl@csail.mit.edu
 2014
 
 %import functions

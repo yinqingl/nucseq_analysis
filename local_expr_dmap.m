@@ -3,7 +3,7 @@ estimate how rare it is to find a gene highly expressed in cells
 positioned in a neighborhood in tSNE embedding
 
 Yinqing Li
-yinqing@mit.edu
+yinqing@csail.mit.edu
 2015
 
 inputs:

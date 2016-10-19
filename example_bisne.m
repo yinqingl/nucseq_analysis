@@ -3,7 +3,7 @@ This example shows how to use bisne to select genes that have
 spatial pattern in tSNE embeddings
 
 Yinqing Li
-yinqingl@mit.edu
+yinqingl@csail.mit.edu
 2016
 
 %}
@@ -140,7 +140,7 @@ for j = 1:pmut_size,
     hold on
 end
 
-pp_I = [55,18]+1e1;   %set cut-off of ranks according to the permutation test
+pp_I = [55,18]+1e1;   %set cut-off of ranks based on the permutation test
 i_glist = [];
 for i = 1:length(pp),
     p = pp{i};

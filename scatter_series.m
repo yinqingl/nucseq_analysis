@@ -2,7 +2,7 @@
 help functions for visualizing the selected bisne genes
 
 Yinqing Li
-yinqingl@mit.edu
+yinqingl@csail.mit.edu
 MIT, 2015
 %}
 
