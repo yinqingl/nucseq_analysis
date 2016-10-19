@@ -29,6 +29,7 @@ func_h.corr2d = @corr2d;
 func_h.eigenvalue_fit = @eigenvalue_fit;
 func_h.pca_tsne = @pca_tsne; %example for PCA and tSNE embedding
 func_h.bisne_selection = @bisne_selection; %example for selection of bisne threshold
+func_h.datamatrix2matrix = @datamatrix2matrix;
 
 %make sure these functions are in the directory
 %{
@@ -240,6 +241,14 @@ y_fit = xp*b;
 nout = max(nargout,1) - 1;
 for k = 1:nout
    varargout{k} = y_fit_l;
+end
+
+function [dat, cellnames, genes, num_samples, num_genes] = datamatrix2matrix(dat_matrix)
+dat = double(dat_matrix);
+cellnames = get(dat_matrix, 'ColNames');
+genes = get(dat_matrix, 'RowNames');
+num_samples = get(dat_matrix, 'NCols');
+num_genes = get(dat_matrix, 'NRows');
 end
 
 end
