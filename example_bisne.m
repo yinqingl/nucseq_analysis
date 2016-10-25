@@ -153,7 +153,7 @@ W = W_init(i_glist,:);
 
 [pc_w, ~, pcvars_w] = pca_w(X', W');
 figure;semilogy(pcvars_w,'.')
-i_pc = [1:6];   %select top PC to be used in tsne embedding
+i_pc = [1:4];   %select top PC to be used in tsne embedding
 d_wct = pdist_w(X', W', 'cosine', pc_w(:,i_pc)); d_wct1 = corr2d(1-d_wct);
 ydata_wct = tsne_matlab(squareform(d_wct1),[],2,[],26,'precomputed'); ydata = ydata_wct;
 ydata_post_bisne = ydata;

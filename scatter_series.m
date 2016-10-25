@@ -55,3 +55,12 @@ if strcmp(get(gcbf, 'SelectionType'),'normal'),
 end
 
 end
+
+function [dat, cellnames, genes, num_samples, num_genes] = datamatrix2matrix(dat_matrix)
+dat = double(dat_matrix);
+cellnames = get(dat_matrix, 'ColNames');
+genes = get(dat_matrix, 'RowNames');
+num_samples = get(dat_matrix, 'NCols');
+num_genes = get(dat_matrix, 'NRows');
+end
+
