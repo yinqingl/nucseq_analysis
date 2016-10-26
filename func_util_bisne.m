@@ -244,6 +244,8 @@ for k = 1:nout
    varargout{k} = y_fit_l;
 end
 
+end
+
 function [dat, cellnames, genes, num_samples, num_genes] = datamatrix2matrix(dat_matrix)
 dat = double(dat_matrix);
 cellnames = get(dat_matrix, 'ColNames');
@@ -255,6 +257,4 @@ end
 function c = get_line_color(i, n)
 cn = hsv(n+2);
 c = cn(i+1,:);
-end
-
 end

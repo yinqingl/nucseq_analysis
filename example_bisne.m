@@ -62,10 +62,10 @@ num_genes_rand = 20;
 
 load example_dat
 
-num_cells_rand = round(size(X,2)/2);
-
 X = X_init;
 W = W_init;
+
+num_cells_rand = round(size(X,2)/2);
 
 %perform pca and tsne
 [pc_w, ~, pcvars_w] = pca_w(X', W');
